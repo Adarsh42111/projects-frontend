@@ -1,31 +1,18 @@
 
-// document.querySelector("button").addEventListener("click",function(){       
-//     alert("Ouch, I got clicked!")
-// });
-
-//The above code is only for the 1st button as All is not used in querySelector.
-//Even if we just use All it doesn't matter cause we are not iterating through the array that we get after using querySelectorAll
-//And to iterate throught the array we have to use : querySelectorAll[0],querySelectorAll[1],   till last button(i.e, at index 6)
-//And we can achieve it using loops 
-
 //Detects click
 
 
 for(var i=0; i<document.querySelectorAll(".drum").length;i++){
-    document.querySelectorAll(".drum")[i].addEventListener("click",function(){   //saari button mei eventlistner add kar kar diya hai, abb kisi mei bhi click hoga hume pta chal jaega
-
-        // var audio=new Audio('sounds/tom-1.mp3');
-        // audio.play();
-
+    document.querySelectorAll(".drum")[i].addEventListener("click",function(){  
         var buttonInnerHTML = this.innerHTML;
         makeSound(buttonInnerHTML);
         buttonAnimation(buttonInnerHTML);
     });
 }
 
-//Detecting keyboard press
+//Detects keyboard press
 
-document.addEventListener("keypress",function(event){    //We added event listner to the entire document, and it stores the keys
+document.addEventListener("keypress",function(event){    //We are adding event listner to the entire document, and it stores the keys
     makeSound(event.key);
     buttonAnimation(event.key);
 });
