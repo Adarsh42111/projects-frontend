@@ -1,13 +1,3 @@
-
-// document.querySelector("button").addEventListener("click",function(){       
-//     alert("Ouch, I got clicked!")
-// });
-
-//The above code is only for the 1st button as All is not used in querySelector.
-//Even if we just use All it doesn't matter cause we are not iterating through the array that we get after using querySelectorAll
-//And to iterate throught the array we have to use : querySelectorAll[0],querySelectorAll[1],   till last button(i.e, at index 6)
-//And we can achieve it using loops 
-
 //Detects click
 
 
